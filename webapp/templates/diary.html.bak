@@ -1,0 +1,42 @@
+
+
+
+{% extends 'base_u.html' %}
+{% block content %}
+
+{% load static %}
+{{msg}}
+<center>
+
+<h3><b>Food Diary</h3>
+<table id="tab" width="50%"><form method="post" action="/diary/">
+{% csrf_token %}
+		
+<tr background="{% static 'assets\images\EH.jpg' %}">
+
+	<td><td width="50%"><h5><b>Select Food</b></h2>
+	
+		<select name="fid" class="form-control" width="200px">
+			{% for d1 in data%}
+				<option value="{{d1.id}}">{{d1.food_name}}
+			{% endfor %}
+
+
+
+	</select>
+	
+	<br>
+	<h5><b>Time? 
+		<select name="tim_e" class="form-control">
+			<option value="b">Breakfast	
+			<option value="l">Lunch	
+			<option value="d">Dinner
+	</select>
+<br>
+<input type="submit"class="form-control" value="Store">
+	<td>
+	</form>
+<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+</table>
+
+{% endblock %}

@@ -1,0 +1,40 @@
+
+
+
+{% extends 'base_u.html' %}
+{% block content %}
+
+{% load static %}
+{{msg}}
+<center>
+
+<h3><b>Food Recommendations </h3>
+<table border width="80%"><form method="post" action="/foodrec/">
+{% csrf_token %}
+		
+<tr background="{% static 'assets\images\foodrec.jpg' %}">
+
+	<td width="50%" valign="top">
+	<br>	
+	<font size="" color="#ffff99">
+		<b> Category:{{catgry}}</b><br>
+	<b>SUGGESTED FOOD ITEMS ::</b><br><br>
+		<table><tr><td>
+	<b>Break Fast:</b></td><td>
+	{{break_fast}}</td></tr>
+
+	<tr><td><b>Lunch:</b></td><td>
+	{{lunch}}</td></tr>
+
+	<tr><td><b>Dinner:</b></td><td>
+	{{dinner}}</td></tr>
+
+	
+
+	
+	<td>
+	</form>
+<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+</table>
+
+{% endblock %}

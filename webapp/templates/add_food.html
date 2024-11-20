@@ -1,0 +1,62 @@
+{% extends 'base_a.html' %}
+{% block content %}
+<font size="+1" color="red">{{msg}}
+<center>
+</font>
+<h2>Add Food</h2>
+<br>
+
+
+	
+<form method="post" action="/addfoodaction/">
+	{% csrf_token %} 
+
+	<table id="tab" width="100%">
+	<tr><td width="50%">
+	<table width="100%" >
+
+                    <tr><th><h6><b>Enter Food Name </h4>
+					<input class="form-control"  type="text" name="name" placeholder="Name" required="required"   size="50"   ></input>
+
+                    <tr><td><h6><b>Vitamin A (&#181;g)</h4>
+					<input class="form-control"  type="number" name="v_a" min=0 step="any" required="required"   size="50" value="0"  ></input>	 		   
+
+                    <tr><td><h6><b>Vitamin B (&#181;g)</h4>
+					<input class="form-control"  type="number" name="v_b" min=0 step="any" required="required"   size="50" value="0"  ></input>	 		   
+
+                    <tr><td><h6><b>Vitamin C (&#181;g)</h4>
+					<input class="form-control"  type="number" name="v_c" min=0 step="any" required="required"   size="50" value="0"  ></input>	 		   
+
+                    <tr><td><h6><b>Vitamin B12 (&#181;g)</h4>
+					<input class="form-control"  type="number" name="v_b12" min=0 step="any" required="required"   size="50" value="0"  ></input>	 		   
+					     <tr><td><h6><b>Carbs (mg)</h4>
+					<input class="form-control"  type="number" name="carbs" min=0 step="any" required="required"   size="50" value="0"  ></input>	 		   
+
+</table>
+<td ><table   width="100%">
+
+               
+                    <tr><td><h6><b>Fiber (mg)</h4>
+					<input class="form-control"  type="number" name="fiber" min=0 step="any" required="required"   size="50" value="0"  ></input>	 		   
+
+                    <tr><td><h6><b>Sugars (mg)</h4>
+					<input class="form-control"  type="number" name="sugars" min=0 step="any" required="required"   size="50" value="0"  ></input>	 		   
+
+                    <tr><td><h6><b>Calcium(mg)</h4>
+					<input class="form-control"  type="number" name="calcium" min=0 step="any" required="required"   size="50" value="0"  ></input>	 		   
+
+                    <tr><td><h6><b>Iron (mg)</h4>
+					<input class="form-control"  type="number" name="iron" min=0 step="any" required="required"   size="50" value="0"  ></input>	 		   
+
+                    <tr><td><h6><b>Iodine (mg)</h4>
+					<input class="form-control"  type="number" name="iodine" min=0 step="any" required="required"   size="50" value="0"  ></input>	 		   
+
+					<tr><th><h6><b>&nbsp;</h5><input type="submit" class="form-control" value="Add"  size="50" >
+                
+	</table>
+</table>
+
+</form>
+
+
+{% endblock %}

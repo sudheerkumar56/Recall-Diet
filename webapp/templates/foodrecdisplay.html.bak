@@ -1,0 +1,33 @@
+
+
+
+{% extends 'base_u.html' %}
+{% block content %}
+
+{% load static %}
+{{msg}}
+<center>
+
+<h3><b>Food Recommendations </h3>
+<table id="tab" width="80%"><form method="post" action="/foodrec/">
+{% csrf_token %}
+		
+<tr background="{% static 'assets\images\foodrec.jpg' %}">
+
+	<td width="50%" valign="top">
+	<br>	
+	<font size="" color="#ffff99">
+	<b>SUGGESTED FOOD ITEMS ::</b><br><br>
+
+	{% for d1 in data %}
+
+		{{d1}}<br>
+	{% endfor %}
+
+	
+	<td>
+	</form>
+<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+</table>
+
+{% endblock %}

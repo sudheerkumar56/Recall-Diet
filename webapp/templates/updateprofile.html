@@ -1,0 +1,50 @@
+{% extends 'base_u.html' %}
+{% block content %}
+
+<center>
+<h2>View Profile</h2>
+<br>
+<form method="post" action="/updateprofile/">
+{% csrf_token %}
+	<table id="tab" width="50%">
+<tr>
+	<th>Name</td>
+	<td><input type="text" class="form-control"   name="name" value="{{ data.name}}"></td>
+</tr>
+<tr>
+	<th>Email</td>
+	<td><input type="text" class="form-control"  readonly name="email"  value="{{ data.email }}"></td>
+</tr>
+<tr>
+	<th>Phone</td>
+	<td><input type="text" class="form-control"  name="phone" value="{{ data.phone }}"></td>
+
+<tr>
+	<th>Weight</td>
+	<td><input type="text" class="form-control"  name="weight" value="{{ data.weight }}"></td>
+
+<tr>
+	<th>Height </td>
+	<td><input type="text" class="form-control"  name="height" value="{{ data.Height }}"></td>
+
+<tr>
+	<th>Age</td>
+	<td><input type="text" class="form-control"  name="age" value="{{ data.age}}"></td>
+
+<tr>
+	<th>Tyoe of Diet (Weight {{data.type_diet}})</td>
+	<td>					<select name="typ_e" class="form-control"  >
+							<option value="gain" selected>To gain Weight 
+							<option value="reduce">To reduce Weight
+						</select>
+
+
+</tr>
+<tr><th><td><input type="submit" value="Update" class="form-control"  >
+</tr>
+</table>
+</form>
+<br><br>
+
+<br><br>
+{% endblock %}

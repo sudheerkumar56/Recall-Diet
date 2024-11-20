@@ -1,0 +1,47 @@
+
+
+
+{% extends 'base_u.html' %}
+{% block content %}
+
+{% load static %}
+{{msg}}
+<center>
+
+<h3><b>Recommended Dietary Allowance</h3><br><br>
+<table id="tab" width="50%"><form method="post" action="/rda/">
+{% csrf_token %}
+		
+<tr >
+
+	<th>
+	<h5><b>Age Group</h5><td>{{d.age_cat}}
+	
+<tr >
+
+	<th>
+	<h5><b>Gender</h5><td>{{d.gender}}
+<tr >
+
+	<th>
+	<h5><b>Recommendation for</h5><td>Weight {{d.type_diet}}
+
+<tr >
+
+	<th> <h5><b>Reports of
+<td>
+	<h5><b>
+		<select name="mode" class="form-control">
+
+			<option value="today">Today
+			<option value="weekly">This Week
+			<option value="monthly">This Month
+
+	</select>	
+	<tr><td><td>
+<input type="submit"class="form-control" value="Get Reports">
+	</form>
+
+</table>
+
+{% endblock %}

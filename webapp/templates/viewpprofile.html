@@ -1,0 +1,44 @@
+{% extends 'base_u.html' %}
+{% block content %}
+
+<center>
+<h2>View Profile</h2>
+<br>
+<table id="tab" width="50%">
+<tr>
+	<th>Name</td>
+	<td>{{ data.name }}</td>
+</tr>
+<tr>
+	<th>Email</td>
+	<td>{{ data.email }}</td>
+</tr>
+<tr>
+	<th>Phone</td>
+	<td>{{ data.phone}}</td>
+</tr>
+<tr>
+	<th>Age</td>
+	<td>{{ data.age}}</td>
+</tr>
+<tr>
+	<th>Height</td>
+	<td>{{ data.Height}}</td>
+</tr>
+<tr>
+	<th>Weight</td>
+	<td>{{ data.weight}}</td>
+</tr>
+<tr>
+	<th>Mode</td>
+	<td>Weight {{ data.type_diet}}</td>
+</tr>
+
+</tr>
+</table>
+<br><br>
+<a href="/updateprofile"><h3>Update Profile</h3></a>
+
+
+<br><br>
+{% endblock %}

@@ -1,0 +1,53 @@
+
+
+
+{% extends 'base_u.html' %}
+{% block content %}
+
+{% load static %}
+
+{{msg}}
+<center>
+<h3><b>Recommended Dietary Allowance</h3><br><br>
+
+<table id="tab" width="50%"><form method="post" action="/rda2/">
+
+{% csrf_token %}
+		
+<tr >
+
+	<th> <h5><b>Get reports of
+<td>
+	<h5><b>
+		<select name="reportof" class="form-control">
+					<option  value="v_a"  >VItamin A  </option >	 		   
+
+					<option  value="v_b"  >VItamin B</option >	 		   
+					<option  value="v_c"  >VItamin C  </option >	 		   
+
+					<option  value="v_b12"  >VItamin B12  </option >	 		   
+					<option  value="carbs"  >Carbs  </option >	 		   
+
+					<option  value="fiber"  >Fiber  </option >	 		   
+					<option  value="sugars"  >Sugars  </option >	 		   
+
+					<option  value="calcium"  >Calcium  </option >	 		   
+
+					<option  value="iron"  >Iron  </option >	 		   
+
+					<option  value="iodine"  >Iodine  </option >	 		   
+
+
+	</select>	
+	<tr><td><td>
+<input type="submit"class="form-control" value="Get Reports">
+	</form>
+
+</table>
+<br><br>
+{% if b %}
+  <img src="data:image/png;base64,{{ image_base64 }}" alt="Bar Graph">
+{% endif %}
+<br><br>
+
+{% endblock %}

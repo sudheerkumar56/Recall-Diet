@@ -1,0 +1,46 @@
+
+{% extends 'base_a.html' %}
+
+{% load static %}
+{% block content %}
+
+
+<h3>
+	
+{{msg}}
+	
+	<h3>
+	View Food Data <br><br>
+</h2>
+</h3>
+<center>
+				<table id="tab" width="100%">
+<tr>
+	<th width="5%">FID<th><center>Name<tH>Vitamin A<tH>Vitamin B<tH>Vitamin C<tH>Vitamin B12<tH>Carbs<tH>Fiber<tH>Sugars<tH>Calcium<tH>Iron<tH>Iodine
+
+
+
+
+				{% for d in data %}
+<tr><td>{{d.id}}
+<td><font size="" color="#ff0066">{{d.food_name}}</font>
+<td><font size="" color="#ff0066">{{d.v_a}}
+<td><font size="" color="#ff0066">{{d.v_b}}
+<td><font size="" color="#ff0066">{{d.v_c}}
+<td><font size="" color="#ff0066">{{d.v_b12}}
+<td><font size="" color="#ff0066">{{d.carbs}}
+<td><font size="" color="#ff0066">{{d.fiber}}
+<td><font size="" color="#ff0066">{{d.sugars}}
+<td><font size="" color="#ff0066">{{d.calcium}}
+<td><font size="" color="#ff0066">{{d.iron}}
+<td><font size="" color="#ff0066">{{d.iodine}}
+
+
+				{% endfor %}
+</table>
+
+<center><br><br>
+
+       
+	
+{% endblock %}

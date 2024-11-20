@@ -1,0 +1,40 @@
+
+
+
+{% extends 'base_u.html' %}
+{% block content %}
+
+{% load static %}
+{{msg}}
+<center>
+
+<h3><b>Food Recommendation </h3>
+<table id="tab" width="80%"><form method="post" action="/food_rec/">
+{% csrf_token %}
+		
+<tr background="{% static 'assets\images\foodrec.jpg' %}">
+
+	<td width="50%">
+	<br>	
+	<font size="" color="#ffffcc">
+	
+
+	<h5><b>Weight?</h5>
+	<input type="text" name="w" value="{{d.weight}}" required>Kilos
+	<br>	<br>
+
+	<h5><b>Height?</h5>
+	<input type="text" name="h" value="{{d.Height}}" required>CM
+	<br>	<br>
+
+
+		
+	
+<br>
+<input type="submit"class="form-control" value="Recommend ">
+	<td>
+	</form>
+<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+</table>
+
+{% endblock %}
